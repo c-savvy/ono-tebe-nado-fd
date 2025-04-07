@@ -1,3 +1,5 @@
+
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
+  text-underline-offset: 4px;
 }
 
 h1,
@@ -36,3 +39,4 @@ img {
 button {
   font: inherit;
 }
+

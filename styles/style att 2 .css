@@ -1,6 +1,7 @@
 .header{
     /* border for visualisation */ 
     /*  border: 1px, dashed, red; */ 
+    
     display: grid;
     width: 1100px;
     height: 293px;
@@ -9,11 +10,10 @@
     padding: 90px 50px;   
 }
 .headerlogo{
-    margin-left: 45px;
     display: block;
     grid-area: headerlogo;
-    place-self: center start;
-    width: 140px;
+    place-self: center center;
+    width: 150px;
     height: fit-content;
 }
 .headernav{
@@ -22,13 +22,13 @@
     display: flex;
     font-size: 18px;
 }
-.header-links-list{
+.headerlinkslist{
     display: flex;
     gap: 32px;
     text-wrap: nowrap;
     list-style-type: circle;
 }
-.header-contactinfo{
+.contactinfo{
     grid-area: headercontacts;
     padding: 6px 0 0 70px;
     font-size: 18px;
@@ -44,6 +44,7 @@
 .cover{    
     /* border for visualisation */ 
     /*border: 1px, dashed, red; */ 
+
     padding: 50px 50px;
     display: flex; 
     flex-direction: column;
@@ -74,15 +75,19 @@
     padding-bottom: 15px;
     width: fit-content;
     height: fit-content;
+    
 }
 .covertext-right{
     padding-bottom: 105px;
     width: fit-content;
     height: fit-content;
     align-self: flex-end;
+
 }
 .cover-no-spacing{
     letter-spacing: 0
+
+
 }
 .coverbottomtext{
     display: flex;
@@ -114,12 +119,6 @@
     width: 1100px;
     height: 757px;
 } 
-.remove-bullet-point{
-    list-style-type: none;
-}
-.remove-underline{
-    text-decoration: none;
-}
 .auction-items-heading{
     /* position: absolute; */
     padding-left: 40px;
@@ -131,7 +130,7 @@
 }
 .auction-items{
     /* border for visualisation */ 
-    /* border: 1px, dashed, red; */
+    border: 1px, dashed, red; 
     display: flex;
     flex-wrap: wrap;
     justify-self: center; 
@@ -145,53 +144,43 @@
     height: inherit;
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 .auction-item{
     /* border for visualisation */ 
     /* border: 1px, dashed, red; */
-    display: flex;
-    flex-direction: column;
-    flex-basis: calc(100% / 3); 
-    justify-content: space-between;
-    padding: 48px 40px;
-    max-width: 334px; 
+    /* flex-direction: column;
+    flex-basis: calc(100% / 3);
+    justify-content: space-between; */
+
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    /* padding: 48px 40px; */
+    max-width: 334px;
     min-height: 596px;
-    background-color: black;
-}
-.auction-item-image-left{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/card-lot-01.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: cover ;
 }
-.auction-item-image-center{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/card-lot-02.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.auction-item-image-right{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/card-lot-03.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.lot-name{
-    min-width: 254px;
-    font-size: 22px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    line-height: 120%;
+    .lot-name{
+        min-width: 254px;
+        font-size: 22px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        line-height: 120%;
  }
-.lot-desc{
-    min-width: 254px;
-    font-size: 20px;
-    line-height: 120%;   
-}
-.lot-image{
-    width: inherit;
-    height: inherit;
-}
+    .lot-desc{
+        min-width: 254px;
+        font-size: 20px;
+        line-height: 120%;   
+    }
+    .lot-image{
+
+        max-width: 334px;
+        min-height: 596px;
+        z-index: -1;
+    }
 .lots-link-more{
     display: flex;
     align-self: flex-end;
@@ -199,89 +188,4 @@
     height: fit-content;
     padding: 0 0 0 40px; 
     font-size: 20px;
-}
-.about{
-    /* border for visualisation */ 
-    /* border: 1px, dashed, red; */
-    margin: 120px 0 0 0;
-    width: 1052px;
-    min-height: 595px;
-    display: flex;
-    justify-self: center;
-    justify-content: space-between;
-    
-    flex-flow: row-reverse wrap;
-}
-.about-logo{ 
-    margin-top: 30px;
-    margin-left: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: black;
-    width: 240px;
-    height: 240px;
-}
-.about-logo-image{
-    width: 150px;
-    height: 110px;
-}
-.about-text{
-    /* border for visualisation */ 
-    /* border: 1px, dashed, red; */
-    margin-top: 133px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 693px;
-    height: 449px;
-    font-size: 20px;
-}
-.about-heading{
-    margin-top: auto;
-    padding-bottom: 78px;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.about-paragraph{
-    padding-top: 20px;
-}
-.footer{
-    margin-top: 170px;
-    display: grid;
-    padding: 1px 50px 80px;
-    width: 1100px;
-    height: 180px;
-    grid-template-areas: "footercontacts footernav footersocials";
-    grid-template-columns: 1fr 1fr 1fr; 
-    font-size: 18px; 
-    line-height: 24.3px;
-
-}
-.footer-nav{
-    grid-area: footernav;
-}
-.footer-links-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-wrap: nowrap;
-    list-style-type: none;
-}
-.footer-contact-info{
-    grid-area: footercontacts;
-    width: 265px;
-}
-.footer-social-links{
-    grid-area: footersocials;
-    display: flex;
-    justify-self: end;
-    text-decoration: none;
-    gap: 48px;
-}
-.footer-social-links-image{
-    width: 48px;
-    height: 48px;
 }
