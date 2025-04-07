@@ -6,7 +6,7 @@
     height: 293px;
     grid-template-areas: "headerlinks headerlogo headercontacts";
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 90px 50px;   
+    padding: 90px 20px;   
 }
 .headerlogo{
     margin-left: 45px;
@@ -30,7 +30,7 @@
 }
 .header-contactinfo{
     grid-area: headercontacts;
-    padding: 6px 0 0 70px;
+    padding: 6px 0 0 50px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.2px;
