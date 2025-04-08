@@ -112,7 +112,7 @@
   border: 1px solid currentColor;
   text-transform: uppercase;
 }
-.cover-overlay { 
+.cover-overlay {
   position: absolute;
   inset: 0;
   flex-shrink: 0;
@@ -144,7 +144,7 @@
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
-  }
+}
 .auction-items-list {
   color: white;
   /*  width: inherit;  */
@@ -170,15 +170,18 @@
 }
 .auction-item-image-movie {
   /* background-image: url(../images/card-lot-01.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-01.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/card-lot-01.jpg);
 }
 .auction-item-image-book {
   /* background-image: url(../images/card-lot-02.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-02.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/card-lot-02.jpg);
 }
 .auction-item-image-painting {
   /* background-image: url(../images/card-lot-03.jpg); */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-03.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/card-lot-03.jpg);
 }
 .auction-item-image {
   /* background: (linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); */
