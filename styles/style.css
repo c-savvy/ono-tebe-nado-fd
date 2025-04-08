@@ -3,19 +3,19 @@
   /*  border: 1px, dashed, red; */
   display: grid;
   width: 1100px;
-  height: 293px;
+  height: fit-content;
   grid-template-areas: "headerlinks headerlogo headercontacts";
   grid-template-columns: 1fr 150px 1fr;
   padding: 90px 20px;
 }
-.headerlogo {
+.header-logo {
   display: block;
   grid-area: headerlogo;
   place-self: center center;
   width: 140px;
   height: fit-content;
 }
-.headernav {
+.header-nav {
   grid-area: headerlinks;
   place-self: center center;
   display: flex;
@@ -27,16 +27,17 @@
   text-wrap: nowrap;
   list-style-type: circle;
 }
-.header-contactinfo {
+.header-contact-info {
   padding: 8px 30px 0 185px;
   grid-area: headercontacts;
   display: flex;
   justify-self: flex-end;
   font-size: 18px;
+  font-style: normal;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
-.contactinfolist {
+.contact-info-list {
   list-style-type: none;
 }
 .custom-image-style {
@@ -45,19 +46,21 @@
 .cover {
   /* border for visualisation */
   /*border: 1px, dashed, red; */
+  position: relative;
   padding: 50px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
   width: auto;
-  height: 757px;
+  min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-color: rgb(255, 95, 148);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
-.covertext {
+.cover-text {
   color: white;
   font-size: 100px;
   text-transform: uppercase;
@@ -65,18 +68,18 @@
   letter-spacing: 0.3em;
   z-index: 2;
 }
-.covertext-left {
+.cover-text-left {
   padding-bottom: 15px;
   width: fit-content;
   height: fit-content;
   align-self: start;
 }
-.covertext-center {
+.cover-text-center {
   padding-bottom: 15px;
   width: fit-content;
   height: fit-content;
 }
-.covertext-right {
+.cover-text-right {
   padding-bottom: 105px;
   width: fit-content;
   height: fit-content;
@@ -85,7 +88,7 @@
 .cover-no-spacing {
   letter-spacing: 0;
 }
-.coverbottomtext {
+.cover-bottom-text {
   display: flex;
   gap: 110px;
   align-items: center;
@@ -106,11 +109,13 @@
   padding-right: 30px;
   color: white;
   background-color: rgb(0, 0, 0, 0);
-  border: 1px solid white;
+  border: 1px solid currentColor;
   text-transform: uppercase;
 }
-.cover-overlay {
+.cover-overlay { 
   position: absolute;
+  inset: 0;
+  flex-shrink: 0;
   background-color: rgb(0, 0, 0, 0.6);
   width: 1100px;
   height: 757px;
@@ -129,16 +134,16 @@
   justify-self: center;
   margin-top: 175px;
   width: 1052px;
-  min-height: 730px;
+  height: fit-content;
 }
 .auction-items-heading {
-    /* position: absolute; */
-    padding: 5px 0 0 40px;
-    width: auto;
-    height: fit-content;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
+  /* position: absolute; */
+  padding: 5px 0 27px 40px;
+  width: auto;
+  height: fit-content;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
   }
 .auction-items-list {
   color: white;
@@ -163,21 +168,20 @@
   min-height: 596px;
   background-color: black;
 }
-.auction-item-image-left {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
+.auction-item-image-movie {
+  /* background-image: url(../images/card-lot-01.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-01.jpg);
 }
-.auction-item-image-center {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
+.auction-item-image-book {
+  /* background-image: url(../images/card-lot-02.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-02.jpg);
 }
-.auction-item-image-right {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/card-lot-03.jpg);
+.auction-item-image-painting {
+  /* background-image: url(../images/card-lot-03.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-03.jpg);
+}
+.auction-item-image {
+  /* background: (linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); */
   background-position: center;
   background-size: cover;
 }
@@ -202,15 +206,14 @@
   align-self: flex-end;
   width: fit-content;
   height: fit-content;
-  padding: 0 0 0 40px;
+  padding: 30px 0 0 40px;
   font-size: 20px;
 }
 .about {
   /* border for visualisation */
   /* border: 1px, dashed, red; */
-  margin: 120px 0 0 0;
+  padding: 125px 0 0 0;
   width: 1052px;
-  min-height: 595px;
   display: flex;
   justify-self: center;
   justify-content: space-between;
@@ -235,12 +238,11 @@
 .about-text {
   /* border for visualisation */
   /* border: 1px, dashed, red; */
-  margin-top: 133px;
+  margin-top: 135px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 693px;
-  height: 449px;
   font-size: 20px;
 }
 .about-heading {
@@ -258,7 +260,6 @@
   display: grid;
   padding: 1px 50px 80px;
   width: 1100px;
-  height: 180px;
   grid-template-areas: "footercontacts footernav footersocials";
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 18px;
@@ -276,6 +277,7 @@
 .footer-contact-info {
   grid-area: footercontacts;
   width: 265px;
+  font-style: normal;
 }
 .footer-social-links {
   grid-area: footersocials;
