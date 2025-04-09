@@ -136,7 +136,7 @@
 }
 .auction-items-heading {
   /* position: absolute; */
-  padding: 5px 0 27px 40px;
+  padding: 2px 0 27px 40px;
   width: auto;
   height: fit-content;
   font-size: 40px;
@@ -216,7 +216,7 @@
 .about {
   /* border for visualisation */
   /* border: 1px, dashed, red; */
-  padding: 123px 0 0 0;
+  padding: 120px 0 0 0;
   width: 1052px;
   display: flex;
   justify-self: center;
@@ -257,7 +257,7 @@
   font-weight: bold;
 }
 .about-paragraph {
-  padding-top: 20px;
+  padding-top: 22px;
 }
 .footer {
   margin-top: 182px;
