@@ -6,7 +6,7 @@
   height: fit-content;
   grid-template-areas: "headerlinks headerlogo headercontacts";
   grid-template-columns: 1fr 150px 1fr;
-  padding: 90px 20px;
+  padding: 92px 20px;
 }
 .header-logo {
   display: block;
@@ -27,18 +27,18 @@
   text-wrap: nowrap;
   list-style-type: circle;
 }
-.header-contact-info {
-  padding: 8px 30px 0 185px;
-  grid-area: headercontacts;
+.contact-info {
   display: flex;
-  justify-self: flex-end;
+  flex-direction: column;
   font-size: 18px;
   font-style: normal;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
-.contact-info-list {
-  list-style-type: none;
+.header-contact-info {
+  grid-area: headercontacts;
+  padding: 8px 30px 0 185px;
+  justify-self: end;
 }
 .custom-image-style {
   filter: brightness(30%);
@@ -117,8 +117,6 @@
   inset: 0;
   flex-shrink: 0;
   background-color: rgb(0, 0, 0, 0.6);
-  width: 1100px;
-  height: 757px;
 }
 .remove-bullet-point {
   list-style-type: none;
@@ -155,6 +153,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.auction-item-link {
+  text-decoration: none;
 }
 .auction-item {
   /* border for visualisation */
@@ -215,7 +216,7 @@
 .about {
   /* border for visualisation */
   /* border: 1px, dashed, red; */
-  padding: 125px 0 0 0;
+  padding: 123px 0 0 0;
   width: 1052px;
   display: flex;
   justify-self: center;
@@ -256,10 +257,10 @@
   font-weight: bold;
 }
 .about-paragraph {
-  padding-top: 25px;
+  padding-top: 20px;
 }
 .footer {
-  margin-top: 180px;
+  margin-top: 182px;
   display: grid;
   padding: 1px 50px 80px;
   width: 1100px;
@@ -280,7 +281,6 @@
 .footer-contact-info {
   grid-area: footercontacts;
   width: 265px;
-  font-style: normal;
 }
 .footer-social-links {
   grid-area: footersocials;
